@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gradient-to-br from-gray-900 to-black text-white min-h-screen flex items-center justify-center">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub User Finder</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col items-center px-4 py-10">
+  <h1 class="text-3xl md:text-4xl font-bold mb-2">GitHub User Finder</h1>
+  <p class="text-sm mb-6 text-gray-400">Search and view GitHub user profiles in style</p>
+
+  <!-- Input -->
+  <div class="flex w-full max-w-md mb-6">
+    <input id="usernameInput" type="text" placeholder="Enter GitHub username..."
+      class="flex-grow px-4 py-2 bg-gray-800 text-white rounded-l-lg outline-none focus:ring-2 focus:ring-blue-500">
+    <button onclick="fetchUser()"
+      class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg transition">Search</button>
+  </div>
+
+  <!-- Card -->
+  <div id="profileCard" class="bg-gray-800 w-full max-w-md p-6 rounded-xl shadow-lg hidden transition-all">
+    <div class="flex items-center gap-4">
+      <img id="avatar" src="" alt="Avatar" class="w-16 h-16 rounded-full border-2 border-blue-500">
+      <div>
+        <h2 id="name" class="text-xl font-semibold">Name</h2>
+        <p id="username" class="text-gray-400">@username</p>
+      </div>
+    </div>
+    <div class="mt-4 text-sm space-y-1">
+      <p><span class="font-semibold">Followers:</span> <span id="followers">0</span></p>
+      <p><span class="font-semibold">Following:</span> <span id="following">0</span></p>
+      <p><span class="font-semibold">Repos:</span> <span id="repos">0</span></p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <p class="mt-10 text-sm text-gray-400">Built with ❤️ using Tailwind CSS</p>
+
+  <script src="script.js"></script>
+</body>
+</html>
